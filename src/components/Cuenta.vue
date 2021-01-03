@@ -7,7 +7,13 @@
                 :class="[saldo <= 0 ? 'bg-danger' : 'bg-success' ]">Tu saldo es: L.{{saldo}}</h4>
             </div>
         </div>
-        <h3> Estado: {{estadoCuenta ? 'Activa' : 'Cerrada'}}</h3> 
+        <div class="row">
+            <div class="col-4">
+                <h3
+                :class="[estadoCuenta = true ? 'bg-success text-white' : 'bg-danger']"
+                > Estado: {{estadoCuenta ? 'Activa' : 'Cerrada'}}</h3> 
+            </div>
+        </div>
         <h3>Tipo de cuenta: {{cuenta}}</h3>
         <!-- Servicios -->
         <div class="row">
@@ -50,7 +56,7 @@ export default {
     },
     data(){
         return {
-            cuenta:'Visa - Debito',
+            cuenta:'Visa - Débito',
             saldo: 1000,
             servicios: ['Cuenta de ahorro', 'Ahorro retirable', 'Giros', 'Depositos'],
             estadoCuenta: true
