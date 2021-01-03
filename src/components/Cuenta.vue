@@ -13,8 +13,12 @@
                 :class="[estadoCuenta = true ? 'bg-success text-white' : 'bg-danger']"
                 > Estado: {{estadoCuenta ? 'Activa' : 'Cerrada'}}</h3> 
             </div>
+            <div class="col-8 bg-info">
+                <h3>Tipo de cuenta: {{cuenta}}</h3>
+            </div>
         </div>
-        <h3>Tipo de cuenta: {{cuenta}}</h3>
+
+
         <!-- Servicios -->
         <div class="row">
             <div class="col-3">
